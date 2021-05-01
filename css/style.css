@@ -11,7 +11,7 @@ body{
     height: 10%;
     z-index: 1;
     display: flex;
-    position: relative;
+    position: absolute;
     background: #121121;
     justify-content: space-between;
 
@@ -23,46 +23,64 @@ body{
     margin-top: 3px;
 }
 .logoDesign img{
-    /* width: 50%; */
     height: 100%;
 }
 .navDesign{
-    width: 400px;
-    height: 50px;
-    color: #fff;
-    margin-left: -200px;
-}
-.navDesign ul{
-    text-decoration: none;
-    list-style-type: none;
+    overflow: hidden;
+    width: 35%;
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
 }
-.navDesign ul li{
-   margin-left:20px; margin-right:20px;
+.navDesign a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 4px;
+  margin-top: 26px;
 }
-.navDesign ul li:hover{
+.navDesign .icon {
+    display: none;
+  }
+  @media screen and (max-width: 600px) {
+    .navDesign a:not(:first-child) {display: none;}
+    .navDesign a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navDesign.responsive {position: relative;
+    } 
+    .navDesign.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navDesign.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+.navDesign a:hover{
     border-bottom: 5px solid #fff;
     color: orange;
     cursor: pointer;
 }
 .otherDesign{
-    width: 20%;
-    height: 50px;
-    color: #fff;
+    height: 57px;
 
 }
 .otherDesign ul{
     text-decoration: none;
     list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 26px;
+    margin-top: 30px;
 }
 .otherDesign ul li{
     border-bottom: 5px solid #fff;
     color: orange;
+    cursor: pointer;
 }
 .downCon{
     height: 90%;
@@ -77,7 +95,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
     gap: 60px;
 
     max-width: 1324px;
@@ -89,16 +106,16 @@ body{
     .downCon .wrapper{
         flex-direction: row;  
     }
+
 }
 
 .bg-cont{
     position: absolute;
-    top: 19%;
+    top: 28%;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-     
     z-index: 0;
 }
 
@@ -110,8 +127,7 @@ body{
 .imgCon{
     width: 250px;
     height: 250px;
-    margin-top: 40px;
-    
+    margin-top: 70px;
     position: relative;
 }
 .imgCon img{
@@ -121,7 +137,6 @@ body{
 
 }
 .textCon{
-    /* width: 50%; */
     max-width: 820px;
     height: 50%;
     margin-top: 9%;
@@ -134,8 +149,6 @@ body{
     justify-content: center;
     padding: 30px 60px;
     text-align: center;
-    /* margin-left: 10%; */
-    /* margin-top: 9%; */
     position: relative;
 }
 h1{
