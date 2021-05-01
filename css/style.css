@@ -70,6 +70,7 @@ body{
 }
 .otherDesign{
     height: 57px;
+    overflow: wrap;
 
 }
 .otherDesign ul{
@@ -174,7 +175,7 @@ button{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 40px;
 }
 .connectApps a{
     color: #ffd93b;
