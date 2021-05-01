@@ -64,6 +64,7 @@ body{
     }
   }
 .navDesign a:hover{
+    border-bottom: 5px solid #fff;
     color: orange;
     cursor: pointer;
 }
