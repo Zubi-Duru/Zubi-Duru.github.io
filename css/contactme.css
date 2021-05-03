@@ -1,4 +1,4 @@
-.formCon{
+.formCon {
     /* height: 600px; */
     width: 100%;
     max-width: 1120px;
@@ -10,44 +10,49 @@
     grid-template-columns: 2fr 1fr;
 
     box-shadow: 12px 12px 42px rgba(0, 0, 0, 0.12);
-    
+
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.formBox{
+h2 {
+    color: #223679;
+}
+
+.formBox {
     background: #fff;
     padding: 30px;
 }
 
-.inputBox{
+.inputBox {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
 
-.input-cont label, .msg-cont label{
+.input-cont label,
+.msg-cont label {
     display: block;
     margin-bottom: 10px;
 }
 
-.input-cont input{
+.input-cont input {
     width: 100%;
     border: none;
     padding: 10px 0px;
     border-bottom: 1px solid #3d62da;
 }
 
-.msg-cont{
+.msg-cont {
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-.msg-cont textarea{
+.msg-cont textarea {
     width: 100%;
     resize: none;
     border: none;
@@ -55,16 +60,16 @@ body{
     border-bottom: 1px solid #3d62da;
 }
 
-.infoBox{
+.infoBox {
     background: #3d62da;
     width: 100%;
 }
 
-.action-cont{
+.action-cont {
     position: relative;
 }
 
-.action-cont .send-btn{
+.action-cont .send-btn {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -135,22 +140,24 @@ body{
 } */
 
 @media screen and (max-width : 768px) {
-    .formCon{
+    .formCon {
         width: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .infoBox{
+
+    .infoBox {
         height: 100px;
     }
-    .formBox{
+
+    .formBox {
         height: 50%;
-    width: inherit;
-    position: relative;
-    padding-top: 250px;
-    font-size: 22px;
-    margin: 20px;
+        width: inherit;
+        position: relative;
+        padding-top: 250px;
+        font-size: 22px;
+        margin: 20px;
     }
 }
