@@ -1,14 +1,16 @@
-*{
+* {
     margin: 0;
 }
-body{
+
+body {
     width: 100%;
     height: 100%;
     display: block;
 }
-.topCon{
+
+.topCon {
     width: 100%;
-    height: 10%;
+    height: 70px;
     z-index: 1;
     display: flex;
     position: absolute;
@@ -16,74 +18,125 @@ body{
     justify-content: space-between;
 
 }
-.logoDesign{
+
+.logoDesign {
     width: 30%;
-    height: 50px;
     margin-left: 2%;
     margin-top: 3px;
+    padding: 15px;
 }
-.logoDesign img{
+
+.logoDesign img {
     height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
-.navDesign{
+
+.navDesign {
+    height: 100%;
     overflow: hidden;
     width: 35%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
-.navDesign a{
-  color: #f2f2f2;
-  text-decoration: none;
-  font-size: 17px;
-  padding: 4px;
-  margin-top: 26px;
+
+.navDesign a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 4px;
+    margin-top: 26px;
 }
-.navDesign .icon {
-    display: none;
-  }
-  @media screen and (max-width: 600px) {
-    .navDesign a:not(:first-child) {display: none;}
-    .navDesign a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .navDesign.responsive {position: relative;
-    } 
-    .navDesign.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .navDesign.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-  }
-.navDesign a:hover{
+
+.navDesign a:hover {
     border-bottom: 5px solid #fff;
     color: orange;
     cursor: pointer;
 }
-.otherDesign{
-    height: 57px;
+
+.navDesign .btn {
+    display: block;
+    z-index: 3;
+}
+
+.navDesign ul {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navDesign.active ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 70px;
+        left: 0;
+        background: #121121;
+    
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .navDesign .btn {
+        display: none;
+    }
+    
+    .navDesign ul {
+        padding: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* @media screen and (max-width: 600px) {
+    .navDesign a.icon {
+        float: right;
+        display: block;
+    }
+
+    .navDesign.active {
+        position: relative;
+    }
+
+    .navDesign.active .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navDesign.active a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+} */
+
+
+.otherDesign {
+    height: 100%;
     overflow: wrap;
 
 }
-.otherDesign ul{
+
+.otherDesign ul {
     text-decoration: none;
     list-style-type: none;
     margin-top: 30px;
 }
-.otherDesign ul li{
+
+.otherDesign ul li {
     border-bottom: 5px solid #fff;
     color: orange;
     cursor: pointer;
+    font-size: 12px;
 }
-.downCon{
+
+.downCon {
     height: 90%;
     /* width: 100%; */
     position: relative;
@@ -92,25 +145,26 @@ body{
     padding: 0 30px;
 }
 
-.downCon .wrapper{
+.downCon .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 60px;
+    align-items: center;
 
     max-width: 1324px;
     padding: 30px;
     margin: auto;
 }
 
-@media screen and (min-width: 768px){
-    .downCon .wrapper{
-        flex-direction: row;  
+@media screen and (min-width: 768px) {
+    .downCon .wrapper {
+        flex-direction: row;
     }
 
 }
 
-.bg-cont{
+.bg-cont {
     position: absolute;
     top: 28%;
     left: 0;
@@ -120,24 +174,27 @@ body{
     z-index: 0;
 }
 
-.bg-cont img{
+.bg-cont img {
     width: 100%;
-    height: 100%;  
+    height: 100%;
 }
 
-.imgCon{
+.imgCon {
     width: 250px;
     height: 250px;
     margin-top: 70px;
     position: relative;
 }
-.imgCon img{
+
+.imgCon img {
     width: 250px;
-    height: 250px; border-radius: 50%;
+    height: 250px;
+    border-radius: 50%;
     object-fit: cover;
 
 }
-.textCon{
+
+.textCon {
     max-width: 820px;
     height: 50%;
     margin-top: 9%;
@@ -146,21 +203,25 @@ body{
     background: #ffd93b;
     position: relative;
 }
-.textSide{
+
+.textSide {
     justify-content: center;
     padding: 30px 60px;
     text-align: center;
     position: relative;
 }
-h1{
+
+h1 {
     text-align: center;
     font-family: Arvo, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-p{
+
+p {
     text-align: center;
     margin-top: 7%;
 }
-button{
+
+button {
     margin-top: 7%;
     padding: 7.5px 15px;
     background-color: #7724c6;
@@ -168,7 +229,8 @@ button{
     outline: none;
     color: #fff;
 }
-.connectApps{
+
+.connectApps {
     width: 100%;
     position: absolute;
     margin-top: 15px;
@@ -177,7 +239,8 @@ button{
     flex-wrap: wrap;
     gap: 35px;
 }
-.connectApps a{
+
+.connectApps a {
     color: #ffd93b;
     text-decoration: none;
 }
