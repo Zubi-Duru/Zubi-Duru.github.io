@@ -131,11 +131,12 @@ body {
     margin-top: 30px;
 }
 
-.otherDesign ul li {
+.otherDesign ul li a{
     border-bottom: 5px solid #fff;
     color: orange;
     cursor: pointer;
     font-size: 12px;
+    text-decoration: none;
 }
 
 .downCon {
@@ -246,3 +247,4 @@ button {
     color: #ffd93b;
     text-decoration: none;
 }
+
