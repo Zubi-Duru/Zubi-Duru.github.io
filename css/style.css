@@ -120,6 +120,8 @@ body {
 .otherDesign {
     height: 100%;
     overflow: wrap;
+    width: 120px;
+    padding-right: 15px;
 
 }
 
